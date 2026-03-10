@@ -1,0 +1,411 @@
+/* home.css – final version with left-aligned logo + heading */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(145deg, #0b0f1c 0%, #1a1f33 100%);
+    color: #f0edf4;
+    line-height: 1.5;
+}
+
+/* --------------------------------
+   UTILITY CLASS (for screen readers)
+----------------------------------- */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* --------------------------------
+   FIXED HEADER – left logo + right nav
+----------------------------------- */
+header.corner-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 0.8rem 2rem;
+    background: rgba(10, 12, 26, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 159, 213, 0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo area - left side */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.img-logo {
+    height: 48px;
+    width: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.logo h1 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    color: white;
+    text-shadow: 0 0 12px rgba(255, 200, 240, 0.7);
+    background: linear-gradient(135deg, #ffffff, #ffd9f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-left: 2px solid rgba(255, 160, 210, 0.6);
+    padding-left: 1rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Right navigation */
+.nav-cluster {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.2rem;
+    letter-spacing: -0.01em;
+    transition: 0.2s;
+    border-bottom: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+}
+
+.nav-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+    filter: drop-shadow(0 0 8px #ffb3d9);
+}
+
+.nav-item.active {
+    border-bottom-color: #ff88c0;
+    text-shadow:
+        0 0 15px #ffa6d6,
+        0 0 30px #ff80b5;
+}
+
+.nav-item:hover {
+    border-bottom-color: #c58cfa;
+    transform: translateY(-2px);
+    text-shadow: 0 0 20px #d8b1ff;
+}
+
+/* --------------------------------
+   MAIN LAYOUT – pushes below fixed header
+----------------------------------- */
+.app {
+    padding-top: 90px;
+    /* adjusted for taller header */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* --------------------------------
+   MAIN CONTENT – full width, smooth entry
+----------------------------------- */
+main.dashboard-panel {
+    flex: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+    animation: fadeSlide 0.5s ease-out;
+}
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Page header inside main */
+.page-header {
+    margin-bottom: 3rem;
+}
+
+h1.dashboard-title {
+    font-size: 4.2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #fff2f9, #e8cbff, #b9dcff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin-bottom: 1.2rem;
+    text-shadow: 0 0 25px rgba(255, 210, 245, 0.7);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+
+h1.dashboard-title span {
+    font-size: 2.4rem;
+    background: rgba(255, 215, 235, 0.25);
+    -webkit-text-fill-color: #ffffff;
+    color: #ffffff;
+    padding: 0.3rem 1.5rem;
+    border-radius: 60px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    border: 1.5px solid rgba(255, 210, 255, 0.7);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 18px rgba(200, 130, 255, 0.5);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.home-intro {
+    font-size: 1.5rem;
+    color: #ffffff;
+    max-width: 900px;
+    background: rgba(25, 20, 45, 0.65);
+    backdrop-filter: blur(8px);
+    padding: 1.8rem 2.5rem;
+    border-radius: 60px;
+    border: 1px solid rgba(255, 170, 220, 0.7);
+    box-shadow: 0 20px 35px -12px #000000b3;
+    font-weight: 400;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    width: fit-content;
+}
+
+.home-intro strong {
+    font-weight: 700;
+    text-shadow:
+        0 0 15px #ff9ed2,
+        0 0 30px #ff7eb9;
+}
+
+/* --------------------------------
+   TEAM SECTION – image grid
+----------------------------------- */
+.team-section {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+/* article card */
+.image-card {
+    flex: 1 1 280px;
+    max-width: 320px;
+    background: rgba(35, 30, 55, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 40px;
+    padding: 1.8rem 1.5rem 2.2rem;
+    border: 1px solid rgba(255, 180, 220, 0.6);
+    box-shadow:
+        0 30px 45px -15px #000000cc,
+        0 0 0 1px rgba(255, 200, 240, 0.3) inset;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #ffb0e6;
+    box-shadow:
+        0 35px 60px -12px #2a1e38,
+        0 0 30px #ffb8e6;
+    background: rgba(50, 42, 75, 0.9);
+}
+
+.image-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 32px;
+    background: #40385b;
+    border: 3px solid rgba(255, 210, 245, 0.8);
+    box-shadow: 0 12px 25px #00000077;
+    transition:
+        border-radius 0.2s,
+        border-color 0.2s;
+}
+
+.image-card:hover img {
+    border-radius: 36px;
+    border-color: #ffd0f0;
+}
+
+.image-caption {
+    margin-top: 1.3rem;
+    width: 100%;
+}
+
+.image-caption h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: linear-gradient(145deg, #ffffff, #ffe8f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.3px;
+    margin-bottom: 0.3rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.image-caption p {
+    margin: 0.4rem 0 0;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #f0e2ff;
+    text-shadow: 0 2px 8px #00000099;
+}
+
+.image-caption p:first-of-type {
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+.image-caption p+p {
+    border-top: 1px dashed #b397d0;
+    padding-top: 0.6rem;
+    margin-top: 0.6rem;
+}
+
+/* --------------------------------
+   FOOTER
+----------------------------------- */
+footer.studio-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(8, 6, 20, 0.7);
+    backdrop-filter: blur(4px);
+    border-top: 1px solid #4a3c66;
+    font-size: 0.9rem;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer.studio-footer p {
+    color: #b3a2d5;
+    margin: 0;
+}
+
+/* --------------------------------
+   RESPONSIVE TWEAKS
+----------------------------------- */
+@media (max-width: 768px) {
+    header.corner-container {
+        padding: 0.8rem 1.5rem;
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: flex-start;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .nav-cluster {
+        width: 100%;
+        gap: 1.8rem;
+        justify-content: flex-start;
+    }
+
+    main.dashboard-panel {
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    h1.dashboard-title {
+        font-size: 3rem;
+    }
+
+    h1.dashboard-title span {
+        font-size: 1.8rem;
+    }
+
+    .home-intro {
+        font-size: 1.2rem;
+        padding: 1.2rem 1.8rem;
+        max-width: 100%;
+    }
+
+    .app {
+        padding-top: 130px;
+        /* extra space for stacked header */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.1rem;
+        padding-left: 0.7rem;
+    }
+
+    .img-logo {
+        height: 40px;
+    }
+
+    h1.dashboard-title {
+        font-size: 2.4rem;
+    }
+
+    .image-card {
+        max-width: 100%;
+    }
+
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .nav-icon {
+        font-size: 1.2rem;
+    }
+
+    .nav-cluster {
+        gap: 1.2rem;
+    }
+}

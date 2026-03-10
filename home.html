@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home · Gradient Aura</title>
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Home page specific styles -->
+    <link rel="stylesheet" href="unified.css">
+</head>
+<body>
+    <div class="app">
+        <!-- FIXED HEADER - proper header tag -->
+        <header class="corner-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="BSIT-Logo" class="img-logo">
+                <h1>PET SHOP</h1>
+            </div>
+            <div class="nav-cluster">
+                <a class="nav-item active" href="home.html">
+                    <span class="nav-icon">⌂</span> Home
+                </a>
+                <a class="nav-item" href="portfolio.html">
+                    <span class="nav-icon">▸</span> Portfolio
+                </a>
+                <a class="nav-item" href="favorites.html">
+                    <span class="nav-icon">★</span> Favorites
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT - proper main tag -->
+        <main class="dashboard-panel dashboard-home">
+            <!-- Page header with h1 -->
+            <header class="page-header">
+                <h1 class="dashboard-title">
+                    Our Team <span>Welcome</span>
+                </h1>
+                <p class="home-intro">
+                    <strong>A glimpse into our project journey designed and built by our team. Dive in and explore our Home, Portfolio, and Favorites.</strong>
+                </p>
+            </header>
+
+            <!-- Team section with proper section and article tags -->
+            <section class="team-section">
+                <h2 class="visually-hidden">Team Members</h2> <!-- Screen reader only -->
+                <div class="image-grid">
+                    <!-- Team member 1 -->
+                    <article class="image-card">
+                        <img src="images/benzz.jpg" alt="Benz Romano - team member" loading="lazy">
+                        <div class="image-caption">
+                            <h3>Benz Romano</h3>
+                            <p>20 years Old</p>
+                            <p>Bachelor of Science in Information Technology</p>
+                        </div>
+                    </article>
+                    
+                    <!-- Team member 2 -->
+                    <article class="image-card">
+                        <img src="images/tey.jpg" alt="Althea Sandoy - team member" loading="lazy">
+                        <div class="image-caption">
+                            <h3>Althea Sandoy</h3>
+                            <p>20 years Old</p>
+                            <p>Bachelor of Science in Information Technology</p>
+                        </div>
+                    </article>
+                    
+                    <!-- Team member 3 -->
+                    <article class="image-card">
+                        <img src="images/jayr.jpg" alt="Jay-r Pelonio - team member" loading="lazy">
+                        <div class="image-caption">
+                            <h3>Jay-r Pelonio</h3>
+                            <p>20 years Old</p>
+                            <p>Bachelor of Science in Information Technology</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER - proper footer tag -->
+        <footer class="studio-footer">
+            <p>© 2026 RSP · All rights reserved</p>
+        </footer>
+    </div>
+</body>
+</html>

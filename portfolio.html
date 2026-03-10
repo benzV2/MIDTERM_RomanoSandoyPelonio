@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio · Gradient Aura</title>
+    <!-- Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Shared styles (optional) -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- Page specific CSS (to be created) -->
+    <link rel="stylesheet" href="unified.css">
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <!-- FIXED HEADER - consistent with home page -->
+        <header class="corner-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="BSIT Logo" class="img-logo">
+                <h1>PET SHOP</h1>
+            </div>
+            <div class="nav-cluster">
+                <a class="nav-item" href="home.html">
+                    <span class="nav-icon">⌂</span> Home
+                </a>
+                <a class="nav-item active" href="portfolio.html">
+                    <span class="nav-icon">▸</span> Portfolio
+                </a>
+                <a class="nav-item" href="favorites.html">
+                    <span class="nav-icon">★</span> Favorites
+                </a>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main>
+            <!-- DASHBOARD SECTION - choice picker -->
+            <section class="dashboard-panel dashboard-portfolio">
+                <header class="page-header">
+                    <h1 class="dashboard-title">
+                        ▸ Function Integration <span>Pick your choice</span>
+                    </h1>
+                </header>
+                
+                <div class="portfolio-simple">
+                    <figure class="portfolio-figure">
+                        <img class="portfolio-image" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&auto=format&fit=crop" alt="Workspace with laptop and notebook" loading="lazy">
+                    </figure>
+                    
+                    <h2 class="choice-heading">Pick your Choice:</h2>
+                    
+                    <ul class="choice-list">
+                        <li onclick="component1()">
+                            <span class="choice-number">1</span>
+                            <span class="choice-text">Temperature Converter</span>
+                        </li>
+                        <li onclick="component2()">
+                            <span class="choice-number">2</span>
+                            <span class="choice-text">The Longer Word</span>
+                        </li>
+                        <li onclick="component3()">
+                            <span class="choice-number">3</span>
+                            <span class="choice-text">Know My Birthstone</span>
+                        </li>
+                        <li onclick="component4()">
+                            <span class="choice-number">4</span>
+                            <span class="choice-text">Basic Operators</span>
+                        </li>
+                        <li onclick="component5()">
+                            <span class="choice-number">5</span>
+                            <span class="choice-text">Compute for Acceleration</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- HERO SECTION - decorative -->
+            <section class="hero">
+                <div class="hero-label">rSp studio</div>
+                <h2 class="hero-title">
+                    <span class="hero-accent">portfolio</span>
+                </h2>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="studio-footer">
+            <p>© 2026 RSP · All rights reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
